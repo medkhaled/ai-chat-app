@@ -14,3 +14,5 @@ Application de chat utilisant Ollama comme modèle d'IA local, avec backend Flas
     ✅ 100% gratuit et privé
     ✅ Fonctionne hors ligne (après téléchargement du modèle)
     ✅ Sauvegarde automatique de toutes les conversations
+    ✅ Historique complet des messages
+    ✅ Gestion des conversations (créer, consulter, supprimer)
