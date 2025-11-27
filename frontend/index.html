@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar avec liste des conversations -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>💬 Conversations</h2>
+                <button class="new-chat-btn" onclick="createNewConversation()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Nouveau
+                </button>
+            </div>
+            <div class="conversations-list" id="conversationsList">
+                <!-- Les conversations seront chargées ici -->
+            </div>
+        </div>
+
+        <!-- Zone de chat principale -->
+        <div class="main-content">
+            <div class="chat-header">
+                <h1>Chat avec IA</h1>
+                <p class="subtitle">Propulsé par Ollama</p>
+                <button class="delete-btn" id="deleteBtn" onclick="deleteCurrentConversation()" style="display: none;">
+                    🗑️ Supprimer
+                </button>
+            </div>
+            
+            <div class="chat-container" id="chatContainer">
+                <div class="welcome-message">
+                    <h2>👋 Bienvenue !</h2>
+                    <p>Commencez une nouvelle conversation ou sélectionnez-en une dans la liste.</p>
+                </div>
+            </div>
+            
+            <div class="input-container">
+                <textarea 
+                    id="messageInput" 
+                    placeholder="Tapez votre message ici..."
+                    rows="1"></textarea>
+                <button id="sendButton" onclick="sendMessage()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
